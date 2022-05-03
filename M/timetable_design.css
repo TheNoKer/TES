@@ -1,0 +1,94 @@
+body{
+    position: absolute;
+    background-image: url(daddy.png);
+    background-size: 10vw;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden{
+    display: none;
+}
+
+.cols{
+    background: linear-gradient(180deg, #C0FBFF 0%, #B6FFC6 100%);/
+    height: 50vw;
+    padding: auto;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+   
+}
+
+.col{
+    margin-top: 10vw;
+}
+
+#cheats > td{
+        /*background-color: #edd9ff;*/
+
+}
+
+
+button{
+    width: 7vw;
+    height: 4vw;
+    margin-left: 20%;
+    margin-top: 30%;
+    background: #FFFFFF;
+    border-radius: 20%;
+    
+    
+    
+}
+
+.point_list{
+    margin-top: 10vw;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.table_list{
+    align-content: center;
+    background-color:;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 1vw;
+}
+
+.entry_list td{
+    height: 2vw;
+}
+
+.entry_list{
+    background-color: yellow;
+    margin-right: 2vw;
+}
+
+#input_text{
+    position: relative;
+    width: 20vw;
+    height: 10vw
+}
+
+#new_input_text{
+    width: 20vw;
+    height: 10vw;
+}
+
+#newItem{
+    display: none;
+    position: absolute;
+    margin: 1vw;
+    overflow: auto;
+    margin-left: 25%;
+}
+
+#newItemTable{
+    width: 50vw;
+    
+    //background: linear-gradient(0deg, #3F0400 0%, #490039 100%);
+}
+
+

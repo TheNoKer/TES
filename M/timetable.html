@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width height=device-height, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/btootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>TES</title>
+    <link rel="stylesheet" href="timetable_design.css">
+    <script src="timetable_logic.js"></script>
+</head>
+<body onload="load()">
+    
+    <div  id="wholeTable">
+    <table id="table_all" class="table">
+        <tr id="cheats">
+            <td id="td1" class="col-md-1">
+                
+                
+                <table id="table_operators" class="table cols">
+                    
+                    <tr>
+                        <td> 
+                            <button  id="bttn1" onclick="addNewPoint()">+</button> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> 
+                            <button id="bttn2" onclick=" selectAction('-', this),deletePoint()">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> 
+                            <button id="bttn3" onclick="selectAction('/', this), editPoint()">/</button> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> 
+                            <button id="bttn4" onclick="selectAction('--', this)">--</button> 
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+            <td id="td3" class="col-md-4">
+                
+                
+                <ul id="point_list" class="cols">
+                    <li class="entry_list" onclick="selectEntry(this)" value="1">
+                        <table class="table_list">
+                            <tr>
+                                <td>
+                                    uno    
+                                </td>
+                                <td>
+                                    00:12
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    tres
+                                </td>
+                                <td>
+                                    quatro
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="entry_list" onclick="selectEntry(this)" value="2">
+                        <table class="table_list">
+                            <tr>
+                                <td>
+                                    text1    
+                                </td>
+                                <td>
+                                    text2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    text3
+                                </td>
+                                <td>
+                                    text4
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+                
+            </td>
+            <td id="td2" class="col-md-2">
+                
+                <table id="table_edit" class="table cols">
+                    <tr>
+                        <td>TIME:</td>
+                        <td><input id="input_time" type="time"></td>
+                    </tr>
+                    <tr>
+                        <td>TO DO:</td>
+                        <td><textarea id="input_text" type="text"></textarea></td>
+                    </tr>
+                </table>
+                
+            </td>
+                   </tr>
+        
+    </table>
+    </div>
+    <div id="hidden"></div>
+    
+    <div id="newItem"> 
+        <table id="newItemTable" class=" cols">
+                <tr>
+                    <td>TIME:</td>
+                    <td><input id="new_input_time" type="time"></td>
+                </tr>
+                <tr>
+                    <td>TO DO:</td>
+                    <td><textarea id="new_input_text" type="text"></textarea></td>
+                </tr>
+                <tr>
+                    <td><button onclick="addItem()" >ADD</button></td>
+                </tr>
+        </table>
+        
+    </div>
+    
+</body>
