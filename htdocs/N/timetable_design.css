@@ -1,0 +1,172 @@
+body{
+    position: absolute;
+    //background-image: url(daddy.png);
+    background-color: #d2cae4;
+    background-size: 10vw;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden{
+    display: none;
+}
+
+.cols{
+    background: linear-gradient(180deg, #C0FBFF 0%, #B6FFC6 100%);
+    height: 50vw;
+    padding: auto;
+        /margin-top: 1vw;
+        /border-bottom-left-radius: 0vw;
+        /border-bottom-right-radius: 15vw;
+        /border-top-left-radius: 1vw;
+   vertical-align: bottom;
+}
+
+.col{
+    margin-top: 10vw;
+}
+
+#cheats > td{
+        /*background-color: #edd9ff;*/
+
+}
+
+
+button{
+    width: 7vw;
+    height: 4vw;
+    margin-left: 20%;
+    margin-top: 30%;
+    background: #FFFFFF;
+    border-radius: 20%;
+    
+    
+    
+}
+
+.point_list{
+    margin-top: 10vw;
+}
+
+ul{
+    list-style-type: none;
+    padding-top: 2vw;
+}
+
+.table_list{
+    align-content: center;
+    background-color:;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 1vw;
+}
+
+.entry_list td{
+    height: 2vw;
+    padding-left: 10vw;
+}
+
+.entry_list{
+    margin-bottom: 2vw;
+    //background-color: yellow;
+    background: linear-gradient(0deg, #399040 0%, #491139 100%);
+    margin-right: 2vw;
+    color: white;
+    border-radius: 20vw;
+    align-content: center;
+    //border: 1vw solid white
+    
+
+}
+
+
+
+#input_text{
+    position: relative;
+    width: 20vw;
+    height: 10vw
+}
+
+#new_input_text{
+    width: 20vw;
+    height: 10vw;
+}
+
+#newItem{
+    display: none;
+    position: absolute;
+    margin: 1vw;
+    overflow: auto;
+    margin-left: 25%;
+}
+
+footer{
+    display: none;
+}
+
+#newItemTable{
+    width: 50vw;
+    
+    //background: linear-gradient(0deg, #3F0400 0%, #490039 100%);
+}
+
+#table_edit tr{
+    height: 10vw;
+}
+
+
+
+@media screen and (max-width: 500px){
+    body{
+        //background-image: url(daddy.png);
+        background-color: #d2cae4;
+
+    }
+    footer{
+        display: block;
+        margin: 0vw;
+        padding-left: 10vw;
+        background: linear-gradient(180deg, #C0FBFF 0%, #B6FFC6 100%);
+        position: fixed;
+        bottom: 0%;
+        width: 100%;
+    }
+    footer button{
+        width: 15vw;
+        margin: auto;
+        height: 10vw;
+    }
+    
+    #td1{
+        display: none;
+    }
+    
+    #td2{
+        position: absolute;
+        bottom: 8%;
+        left: 12%;
+        width: 75%;
+        align-content: center;
+    }
+    #td2 textarea{
+        width: 45vw;
+        height: 15vw;
+    }
+    
+    #td3{
+        height: 100vw;
+    }
+    
+    #point_list {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    body{
+        background-color: black;
+    }
+    #td1{
+     display: ;   
+    }
+}

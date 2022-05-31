@@ -12,6 +12,8 @@ let login = (login_user) => {
         
         if (login_user == "M")
             location.href = "./M/timetable.html"
+        else if (login_user == "N")
+            location.href = "./N/timetable.html"
     }
     
     //fetch(`./{login_user}`)
