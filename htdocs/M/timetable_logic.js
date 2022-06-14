@@ -1,4 +1,4 @@
-var _to_do;
+    var _to_do;
 var _previous_item_id = "cheats";
 var _point_to_do;
 var _previous_point;
@@ -7,8 +7,10 @@ var _selected = "#123456";
 var _current_id = 0;
 
 
-
-let load = () => {
+    /**
+     * executed on first load; sets _previous_point to not return an exception
+     */
+    let load = () => {
     _previous_point = document.getElementById("hidden")
     
     // fetch get all data of day
@@ -24,8 +26,11 @@ let load = () => {
     //.then(data => _current_id = data.value)
     //.catch(ex => console.log(ex))
 }
-
-let loadEntries= (date) => {
+    /**
+     * REST POST fetch to load data of current day when first logging in
+     * @param date current date
+     */
+    let loadEntries= (date) => {
 
     //fetch("./api/tes/d=" + date)
       //  .then(response => response.json)
@@ -38,8 +43,12 @@ let loadEntries= (date) => {
 
 
 }
-
-let selectAction = (to_do_local, item) =>{
+    /**
+     *  picks and saves the currently selected operator
+     * @param to_do_local character of the selected operator
+     * @param item id of the selected item
+     */
+    let selectAction = (to_do_local, item) =>{
     
     let previous_id = _previous_item_id
     
@@ -66,8 +75,10 @@ function setAllButtons () {
 }
 
 
-
-let addNewPoint = () => {
+    /**
+     * enters menu for entering a new point into the list
+     */
+    let addNewPoint = () => {
     document.getElementById("wholeTable").style.display = "none";
     //document.getElementsByTagName("body")[0].style.display = "none";
     document.getElementById("newItem").style.display = "block";
@@ -78,8 +89,10 @@ let addNewPoint = () => {
     
     _to_do = "+"
 }
-
-let addItem = () => {
+    /**
+     * function of the button for adding a new point
+     */
+    let addItem = () => {
     //console.log(document.getElementById("new_input_time").value)
     let time = document.getElementById("new_input_time").value
     //console.log(document.getElementById("new_input_text").value)
@@ -109,9 +122,13 @@ let addItem = () => {
         //body: JSON.stringify(to_send)
     //})
     //.catch(ex => console.log(ex))
-}   
+}
 
-function addPoint(to_send) {
+    /**
+     * function to add the newly added point into the list
+     * @param to_send newly created item
+     */
+    function addPoint(to_send) {
     
     // fetch 
     
@@ -135,7 +152,11 @@ function addPoint(to_send) {
         .appendChild(li)
 }
 
-let selectEntry = (item) =>{
+    /**
+     * visually selects and saves the clicked on item
+     * @param item selected item
+     */
+    let selectEntry = (item) =>{
     //console.log(item.value)
     _point_to_do = item;
 
@@ -161,8 +182,10 @@ let selectEntry = (item) =>{
 
 // add new point
 // delete point 
-
-let deletePoint = () => {
+    /**
+     * removes the selected point from the list
+     */
+    let deletePoint = () => {
     //console.log(_point_to_do.id)
     
     if (_point_to_do == null)
@@ -179,8 +202,10 @@ let deletePoint = () => {
       //  METHOD: "DELETE"
     //})
 }
-
-let editPoint = () => {
+    /**
+     * fills the editing area with the selected item
+     */
+    let editPoint = () => {
     
     if (_point_to_do == null)
         alert("no_point_selected")
@@ -203,8 +228,10 @@ let editPoint = () => {
     
     
 }
-
-let submitChanges = () => {
+    /**
+     * updates the edited item in the list by reading the changes made in the edited area
+     */
+    let submitChanges = () => {
     try{
     let item = {
             time: _point_to_do.getElementsByTagName("*")[4].innerText,
@@ -214,6 +241,14 @@ let submitChanges = () => {
     //console.log(item.text)
     
     // fetch put id time & text (null if necesary)
+
+        _point_to_do.getElementsByTagName("*")[4].innerText = item.time
+        _point_to_do.getElementsByTagName("*")[7].innerHTML = item.text
+
+        //console.log(_point_to_do.getElementsByTagName("*")[7].innerText)
+        //console.log("text")
+
+
     }
     catch (e){
     }

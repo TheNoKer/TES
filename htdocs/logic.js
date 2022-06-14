@@ -1,5 +1,11 @@
 let _PASSWD = "todo";
 
+
+/**
+ * basic js function to log a user in by checking his credenetials
+ *
+ * @param login_user user accessing the website
+ */
 let login = (login_user) => {
     
     
