@@ -150,7 +150,12 @@ let selectEntry = (item) =>{
     //console.log(_point_to_do)
     //console.log(_previous_point.value)
     
-    _previous_point = item;
+    if (_previous_point != item)
+        _previous_point = item
+    else 
+        _previous_point = document.getElementById("hidden")
+    
+    //console.log(_previous_point)
     
 }
 
