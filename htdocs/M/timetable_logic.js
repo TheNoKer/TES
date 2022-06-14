@@ -231,26 +231,27 @@ function setAllButtons () {
     /**
      * updates the edited item in the list by reading the changes made in the edited area
      */
-    let submitChanges = () => {
+let submitChanges = () => {
     try{
     let item = {
-            time: _point_to_do.getElementsByTagName("*")[4].innerText,
-            text: _point_to_do.getElementsByTagName("*")[7].innerText
+            time: document.getElementById("input_time").value,
+            text: document.getElementById("input_text").value
         }
     //console.log(item.time)
     //console.log(item.text)
     
     // fetch put id time & text (null if necesary)
-
-        _point_to_do.getElementsByTagName("*")[4].innerText = item.time
-        _point_to_do.getElementsByTagName("*")[7].innerHTML = item.text
-
-        //console.log(_point_to_do.getElementsByTagName("*")[7].innerText)
-        //console.log("text")
-
-
+    
+    
+    
+    _point_to_do.getElementsByTagName("*")[4].innerText = item.time
+    _point_to_do.getElementsByTagName("*")[7].innerHTML = item.text
+        
+    //console.log(_point_to_do.getElementsByTagName("*")[7].innerText)
+    //console.log("text")
+        
     }
     catch (e){
+        alert(e)
     }
-    
 }
