@@ -44,7 +44,7 @@ let selectAction = (to_do_local, item) =>{
     let previous_id = _previous_item_id
     
     _to_do = to_do_local;
-    console.log(_to_do)
+    //console.log(_to_do)
     let item_id = item.id
     //document.getElementById(item_id).style.backgroundColor = _selected
     //document.getElementById(previous_id).style.backgroundColor = _white;
@@ -97,7 +97,7 @@ let addItem = () => {
         text: text
     }
     
-    console.log(to_send)
+    //console.log(to_send)
     addPoint(to_send)
     
     // fetch post to_send 
@@ -200,14 +200,17 @@ let editPoint = () => {
 }
 
 let submitChanges = () => {
+    try{
     let item = {
             time: _point_to_do.getElementsByTagName("*")[4].innerText,
             text: _point_to_do.getElementsByTagName("*")[7].innerText
         }
-    console.log(item.time)
-    console.log(item.text)
+    //console.log(item.time)
+    //console.log(item.text)
     
     // fetch put id time & text (null if necesary)
-
+    }
+    catch (e){
+    }
     
 }

@@ -155,10 +155,16 @@ footer{
     
     #td3{
         height: 100vw;
+        
     }
     
     #point_list {
         height: 100%;
+    }
+    
+    #td3 > li{
+        position: relative;
+        left: 50vw;
     }
 }
 
