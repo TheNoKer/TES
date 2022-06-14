@@ -119,7 +119,8 @@ footer{
 @media screen and (max-width: 500px){
     body{
         //background-image: url(daddy.png);
-        background-color: #d2cae4;
+        //background-color: red;
+        //background-color: aliceblue;
 
     }
     footer{
@@ -152,6 +153,13 @@ footer{
         width: 45vw;
         height: 15vw;
     }
+    #td2 button{
+        position: absolute;
+        left: 20%;
+        width: 15vw;
+        height: 10vw;
+        top: 30%;
+    }
     
     #td3{
         height: 100vw;
@@ -162,9 +170,34 @@ footer{
         height: 100%;
     }
     
-    #td3 > li{
+    #td3 li{
         position: relative;
-        left: 50vw;
+        right: 1.5%;
+    }
+    
+    #newItem{
+        height: 150vw;
+        width: 75vw;
+        right: 11.5%;
+    }
+    #newItemTable{
+        height: inherit;
+        width: inherit
+    }
+    
+    #newItemTable textarea{
+        height: 60vw;
+        width: 60vw;
+    }
+    
+    #newItemTable button{
+    position: absolute;
+    width: 15vw;
+    height: 10vw;
+    background: #FFFFFF;
+    border-radius: 20%;
+    bottom: 5%;
+    left: 22.5%;
     }
 }
 

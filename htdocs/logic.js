@@ -1,3 +1,5 @@
+let _PASSWD = "todo";
+
 let login = (login_user) => {
     
     
@@ -6,7 +8,7 @@ let login = (login_user) => {
     if (passwd == "" || passwd == null){
         alert("no password entered")
     }
-    else {
+    else if (passwd ==_PASSWD){
     
         // fetch 
         
@@ -14,6 +16,10 @@ let login = (login_user) => {
             location.href = "./M/timetable.html"
         else if (login_user == "N")
             location.href = "./N/timetable.html"
+    }
+    else {
+        alert("wrong password entered")
+
     }
     
     //fetch(`./{login_user}`)
